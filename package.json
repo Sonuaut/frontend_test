@@ -4,10 +4,12 @@
   "version": "1.0.8",
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
+    "dev": "concurrently \"vite\" \"nodemon server/server.js --watch server --watch src\"",
     "build": "vite build",
+    "postbuild": "xcopy /E /Y dist\\* server\\public\\",
+    "lint": "eslint .",
     "preview": "vite preview",
-    "start": "vite start"
+    "start": "vite "
   },
   "dependencies": {
     "@apollo/client": "^3.13.8",
