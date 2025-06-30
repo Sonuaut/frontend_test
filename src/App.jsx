@@ -16,7 +16,7 @@ function App() {
         createRoutesFromElements(
             <Route path="/" element={<MainLayout />}>
                 <Route index element={<Navigate to="/all" replace />} />
-                {/* <Route path="/all" element={<HomePage />} /> */}
+                <Route path="/all" element={<HomePage />} />
                 <Route path="/:categoryId" element={<HomePage />} />
                 <Route path="/products/:productId" element={<ProductDetailsPage />} />
                 <Route path="*" element={<NotFoundPage />} />
